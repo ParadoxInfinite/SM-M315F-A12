@@ -43,6 +43,11 @@ make exynos9610-m31nsxx_defconfig
 make
 ```
 
+Shoutouts to:
+1. [FreshROMs](https://github.com/FreshROMs/android_kernel_samsung_exynos9610_mint) - reference
+2. [LineageOS](https://review.lineageos.org/q/project:LineageOS/android_kernel_samsung_gta4xl) - reference
+3. [Samsung Open Source](https://opensource.samsung.com/uploadSearch?searchValue=m315) - kernel
+
 
 Linux kernel
 ============
