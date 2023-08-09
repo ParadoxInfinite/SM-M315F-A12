@@ -29,7 +29,7 @@ While in the root folder of this repo, run:
 # or use curl if you want
 wget https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/1c1069109f294e9ffbdc1ff8541394ab4b5d941d/clang-r416183b1.tar.gz
 
-tar xzvf clang-r416183b1.tar.gz -C ./clang
+mkdir clang && tar xzvf clang-r416183b1.tar.gz -C ./clang
 ```
 
 #### 3. Build
@@ -37,6 +37,7 @@ tar xzvf clang-r416183b1.tar.gz -C ./clang
 While in the root folder of this repo, run:
 ```bash
 # optionally clean by running: make clean
+chown -R $(whoami) *
 make exynos9610-m31nsxx_defconfig
 
 make
