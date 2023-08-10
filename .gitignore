@@ -213,3 +213,5 @@ toolchain
 clang
 # potential to leak user directories.
 lib/libdss.c
+
+build/

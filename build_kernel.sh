@@ -4,6 +4,8 @@ export ARCH=arm64
 export PLATFORM_VERSION=12
 export ANDROID_MAJOR_VERSION=s
 
+CLANG_FILE="clang-r416183b1.tar.gz"
+
 # toolchain
 sudo echo """
 ======================
@@ -16,8 +18,11 @@ git checkout android-12.1.0_r27
 cd ..
 
 # clang
-wget https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/1c1069109f294e9ffbdc1ff8541394ab4b5d941d/clang-r416183b1.tar.gz
-mkdir clang && tar xzvf clang-r416183b1.tar.gz /dev/null -C ./clang
+if [ ! -f "$CLANG_FILE" ]; then
+    wget -O clang-r416183b1.tar.gz https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/1c1069109f294e9ffbdc1ff8541394ab4b5d941d/clang-r416183b1.tar.gz
+else
+    mkdir clang && tar xzvf clang-r416183b1.tar.gz /dev/null -C ./clang
+fi
 
 # build
 echo "Setting ownership of files for building..."
