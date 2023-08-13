@@ -215,3 +215,5 @@ clang
 lib/libdss.c
 
 build/
+# optionally exclude folders which might not be relevant
+kali-nethunter-kernel/
