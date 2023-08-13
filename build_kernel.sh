@@ -29,7 +29,7 @@ echo "Setting ownership of files for building..."
 sudo chown $(whoami) * > /dev/null
 echo "Done setting ownership of files."
 make ARCH=arm64 CONFIG_SECTION_MISMATCH_WARN_ONLY=y exynos9610-m31nsxx_defconfig
-make -j16 ARCH=arm64 CONFIG_SECTION_MISMATCH_WARN_ONLY=y 
+make -j 16 ARCH=arm64 CONFIG_SECTION_MISMATCH_WARN_ONLY=y
 echo """
 ======================
 Build completed!
